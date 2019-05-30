@@ -41,7 +41,10 @@ class Cart extends Component{
             this.props.history.push('/');
         }
 
-        const onError = (error) => { window.alert("Error: Payment error you were not charged. Try again");}
+        const onError = (error) => { 
+            console.log(error);
+            window.alert("Error: Payment error you were not charged. Try again");
+        }
         const onCancel = (data) => {window.alert("Payment cancelled");}
 
         let returnValue = <h1 style = {{textAlign:'center'}}>Nothing in your cart</h1>
