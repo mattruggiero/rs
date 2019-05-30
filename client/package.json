@@ -1,4 +1,5 @@
 {
+  "proxy": "http://localhost:80",
   "name": "client",
   "version": "0.1.0",
   "private": true,
@@ -26,7 +27,7 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "proxy": "http://localhost:80",
+  
   "browserslist": {
     "production": [
       ">0.2%",
