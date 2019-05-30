@@ -8,7 +8,7 @@ const app = express();
 
 // route vars
 const registerNewUser = require('./routes/user/registerNewUser');
-const login = require('./routes/user/logIn');
+const login = require('./routes/user/login');
 const addRecord = require('./routes/adminOnly/addRecord');
 const browseAll = require('./routes/shop/browseAll');
 const search = require('./routes/shop/search');
