@@ -14,15 +14,15 @@ class PaypalButton extends Component {
         window.ReactDOM = ReactDOM;
     }
   
-    componentDidMount(){
-        const {
-            isScriptLoaded,
-            isScriptLoadSucceed
-        } = this.props;
-        if(isScriptLoaded && isScriptLoadSucceed){
-            this.ListeningStateChangedEvent({showButton:true});
-        }
-    }
+    // componentDidMount(){
+    //     const {
+    //         isScriptLoaded,
+    //         isScriptLoadSucceed
+    //     } = this.props;
+    //     if(isScriptLoaded && isScriptLoadSucceed){
+    //         this.ListeningStateChangedEvent({showButton:true});
+    //     }
+    // }
    
         componentWillReceiveProps(nextProps){
         const {
