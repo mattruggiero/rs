@@ -9,7 +9,8 @@ import axios from 'axios';
 import { emptyCart } from '../../actions/cartActions';
 
 // won't work in PaypalButton.js 
-import { CLIENT } from '../paypal/paypal_keys';
+//import { CLIENT } from '../paypal/paypal_keys';
+const CLIENT = process.env.PAYPAL_PRODUCTION_KEY;
 
 function removePurchasedItemsFromInventory(cart){
     axios({method:'post',url:'/removeRecords',data:cart})
