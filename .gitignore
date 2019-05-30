@@ -1,0 +1,11 @@
+#keys
+/config/keys_dev.js
+/client/paypal/paypal_keys_dev.js
+
+#dependencies
+/node_modules 
+/client/node_modules
+
+
+
+
