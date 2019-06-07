@@ -2,7 +2,7 @@ import axios from 'axios';
 import jwt_decode from 'jwt-decode';
 import { setAuthToken } from '../helperFunctions';
 import store from '../store';
-import { GET_ERRORS, SET_CURRENT_USER } from './types';
+import { GET_ERRORS, SET_CURRENT_USER, CLEAR_ERRORS } from './types';
 
 export function registerUser(userData){
     let url = '/register';
@@ -12,6 +12,7 @@ export function registerUser(userData){
         .then(response =>{
             console.log(response)
             login(response.data);
+            //lose state here but there should be no state to lose so OK
             window.location.href = '/';
         })
         .catch(error => {
@@ -19,6 +20,18 @@ export function registerUser(userData){
                 type:GET_ERRORS,
                 payload: error.response.data
             })
+        })
+        .then(errors =>{
+            let currentState = store.getState();
+            let currentError = currentState.error;
+            let values = Object.values(currentError);
+            console.log(values);
+            let errorMSG = "";
+            for(let each in values){
+                errorMSG = errorMSG + values[each] +"\n";
+            } 
+            window.alert(errorMSG);
+            store.dispatch({type:CLEAR_ERRORS})
         })
 }
 

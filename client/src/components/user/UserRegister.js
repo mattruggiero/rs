@@ -26,19 +26,21 @@ class UserRegister extends Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
+    componentDidUpdate(){
+        window.alert("HELLO");
+    }
 
     
     handleSubmit = (event) => {
         event.preventDefault();
         let userData = {};
-        console.log(event.target[9].value);
         let usefulLength = event.target.length - 1;
         for(let i = 0; i<usefulLength; i++){
             let key = event.target[i].id;
             let value = event.target[i].value;
             userData[key] = value;
         }
-        registerUser(userData);
+        registerUser(userData)
     }
     render(){
         let formInputs = registrationFields.map(each =>{
