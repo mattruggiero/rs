@@ -68,5 +68,5 @@ export function logoutUser(){
         type:SET_CURRENT_USER,
         payload:{}
     })
-    window.location.href = '/login';
+    window.location.href = '/';
 }
