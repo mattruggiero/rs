@@ -9,7 +9,9 @@ import { logoutUser } from '../../actions/authActions';
 class TheNavbar extends Component {
     onClick = (event) => {
         logoutUser();
-        window.location.href = '/login';
+        //window.location.href = '/login';
+        //history.pushState('/');
+       
     }
     render(){
 
