@@ -30,8 +30,10 @@ export function registerUser(userData){
             for(let each in values){
                 errorMSG = errorMSG + values[each] +"\n";
             } 
+            if(values){
             window.alert(errorMSG);
             store.dispatch({type:CLEAR_ERRORS})
+            }
         })
 }
 

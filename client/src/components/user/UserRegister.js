@@ -26,9 +26,6 @@ class UserRegister extends Component {
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
     }
-    componentDidUpdate(){
-        window.alert("HELLO");
-    }
 
     
     handleSubmit = (event) => {
