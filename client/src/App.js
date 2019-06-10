@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import jwt_decode from 'jwt-decode';
 
 
+
 import DisplayResults from './components/storefront/DisplayResults';
 import UserRegister from './components/user/UserRegister';
 import UserLogin from './components/user/UserLogin';
@@ -20,6 +21,7 @@ import { logoutUser } from './actions/authActions';
 import { setCart } from './actions/cartActions';
 import { setSelected } from './actions/inventoryActions';
 
+require('dotenv').config();
 //check for token
 if(localStorage.jwtToken){
   setAuthToken(localStorage.jwtToken);

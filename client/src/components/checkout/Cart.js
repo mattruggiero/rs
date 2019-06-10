@@ -8,6 +8,7 @@ import PaypalButton from '../paypal/PaypalButton';
 import axios from 'axios';
 import { emptyCart } from '../../actions/cartActions';
 
+
 // won't work in PaypalButton.js 
 
 const CLIENT = process.env.PAYPAL_PRODUCTION_KEY;
