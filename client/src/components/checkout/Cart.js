@@ -19,6 +19,10 @@ function removePurchasedItemsFromInventory(cart){
 
 const ENV = process.env.NODE_ENV === 'production'? 'production':'sandbox';
 
+console.log(".env",process.env)
+console.log("paypal",process.env.PAYPAL_PRODUCTION_KEY);
+console.log("paypal",process.env.PAYPAL_SANDBOX_KEY);
+
 class Cart extends Component{
     constructor(props){
         super(props);
