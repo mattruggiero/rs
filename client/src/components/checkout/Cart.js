@@ -7,7 +7,7 @@ import EmptyCartButton from '../buttons/EmptyCartButton';
 import PaypalButton from '../paypal/PaypalButton';
 import axios from 'axios';
 import { emptyCart } from '../../actions/cartActions';
-
+require('dotenv').config();
 
 // won't work in PaypalButton.js 
 
@@ -20,9 +20,6 @@ function removePurchasedItemsFromInventory(cart){
 
 const ENV = process.env.NODE_ENV === 'production'? 'production':'sandbox';
 
-console.log(".env",process.env)
-console.log("paypal",process.env.PAYPAL_PRODUCTION_KEY);
-console.log("paypal",process.env.PAYPAL_SANDBOX_KEY);
 
 class Cart extends Component{
     constructor(props){
